@@ -1,6 +1,7 @@
 <cfscript>
 	function QueryToDataTable(query, labels="", roles="", dform="", nform="", tform="") {
-		var typeMap = { "VARCHAR": "string", "BIGINT": "number", "DATETIME": "datetime", "DATE": "date", "TIME": "timeofday", "": "string" };
+		//this type map is set up for MySQL, other databases may use different type names; modify this line accordingly
+		var typeMap = { "CHAR": "string", "VARCHAR": "string", "BINARY": "string", "VARBINARY": "string", "BLOB": "string", "TEXT": "string", "ENUM": "string", "SET": "string", "INTEGER": "number", "": "number", "SMALLINT": "number", "TINYINT": "number", "MEDIUMINT": "number", "BIGINT": "number", "DECIMAL": "number", "NUMERIC": "number", "FLOAT": "number", "DOUBLE": "number", "BIT": "number", "YEAR": "number", "TIMESTAMP": "datetime", "DATETIME": "datetime", "DATE": "date", "TIME": "timeofday", "": "string" };
 		var data = { "cols": [], "rows": [] };
 		for (i = 1; i lte query.columnList.listLen(); i++) {
 			var col = {};
