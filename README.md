@@ -6,4 +6,4 @@ ColdFusion Script function for converting a ColdFusion Query object into the Goo
 <cfset dataTable = QueryToDataTable(qMyQuery, "Label1,Label2")>
 ```
 ## Requirements
-Tested on ColdFusion 11 with queries from a MySQL database. However, the code could easily be extended for other databases by updating the typeMap structure (around line 3).
+Tested on ColdFusion 11 with queries from a MySQL database. However, the code could easily be extended for other databases by updating the `typeMap` object (around line 3).
