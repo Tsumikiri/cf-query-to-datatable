@@ -11,7 +11,7 @@
 			}
 			var type = query.getMetaData().getColumnTypeName(i);
 			col["type"] = typeMap[typeMap.keyExists(type) ? type : ""];
-			if (roles neq "" and i lte role.listLen(",", true)) {
+			if (roles neq "" and i lte roles.listLen(",", true)) {
 				var role = roles.listGetAt(i, ",", true);
 				if (role neq "") {
 					col["role"] = role;
