@@ -28,7 +28,11 @@
 				if (nform neq "" and type eq "number") {
 					cell = { "v": value };
 					if (nform neq "") {
-						cell["f"] = NumberFormat(value, nform);
+						if (Right(nform, 1) eq "%") {
+							cell["f"] = NumberFormat(100 * value, Left(nform, Len(nform) - 1)) & "%";
+						} else {
+							cell["f"] = NumberFormat(value, nform);
+						}
 					}
 				} else if (type eq "datetime") {
 					cell = { "v": "Date(" & value.year() & ", " & value.month() - 1 & ", " & value.dateTimeFormat("d, H, n, s") };
