@@ -8,6 +8,7 @@ QueryToDataTable(<query>, <labels>, [roles], [dform], [nform], [tform])
 => { "cols": [ ... ], "rows": [ ... ] }
 ```
 
+## Examples
 Basic:
 ```cfm
 <cfset dataTable = QueryToDataTable(qMyQuery, "Label1,Label2")>
