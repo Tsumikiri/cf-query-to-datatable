@@ -3,7 +3,7 @@ ColdFusion Script function for converting a ColdFusion Query object into the Goo
 
 ## Usage
 Outline:
-```cfm
+```
 QueryToDataTable(<query>, <labels>, [roles], [dform], [nform], [tform])
 => { "cols": [ ... ], "rows": [ ... ] }
 ```
