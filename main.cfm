@@ -28,7 +28,7 @@
 				if (nform neq "" and type eq "number") {
 					cell = { "v": value };
 					if (nform neq "") {
-						cell["f"] = value.numberFormat(nform);
+						cell["f"] = NumberFormat(value, nform);
 					}
 				} else if (type eq "datetime") {
 					cell = { "v": "Date(" & value.year() & ", " & value.month() - 1 & ", " & value.dateTimeFormat("d, H, n, s") };
