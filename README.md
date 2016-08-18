@@ -2,6 +2,12 @@
 ColdFusion Script function for converting a ColdFusion Query object into the Google Charts Library's DataTable format, described [here](https://developers.google.com/chart/interactive/docs/reference#dataparam).
 
 ## Usage
+Outline:
+```cfm
+QueryToDataTable(<query>, <labels>, [roles], [dform], [nform], [tform])
+=> { "cols": [ ... ], "rows": [ ... ] }
+```
+
 Basic:
 ```cfm
 <cfset dataTable = QueryToDataTable(qMyQuery, "Label1,Label2")>
