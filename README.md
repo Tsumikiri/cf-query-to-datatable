@@ -32,6 +32,6 @@ Optional. List of roles for the columns. See the Google Charts Documentation for
 Optional. Date format string to use when the DataTable has dates or datetimes. See the documentation for ColdFusion's DateFormat and DateTimeFormat functions for more information.
 ### nform
 Optional. Number format string to use when the DataTable has numbers. See the documentation for ColdFusion's NumberFormat function for more information.
-This function also supports an additional operator from the NumberFormat function: if your format string has a '%' as the last character, the formatted number will be multiplied by 100 before being formatted and a '%' will be appended to the formatted string. For example, an nform of "0.00%" will turn 0.4 into "40.00%"
+The QueryToDataTable function also supports an additional operator from the NumberFormat function: if your format string has a '%' as the last character, the formatted number will be multiplied by 100 before being formatted and a '%' will be appended to the formatted string. For example, an nform of "0.00%" will turn 0.4 into "40.00%"
 ### tform
 Optional. Time format string to use when the DataTable has time of day objects. See the documentation for ColdFusion's TimeFormat function for more information.
