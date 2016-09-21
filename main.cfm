@@ -35,7 +35,7 @@
 						}
 					}
 				} else if (type eq "datetime") {
-					cell = { "v": "Date(" & value.year() & ", " & value.month() - 1 & ", " & value.dateTimeFormat("d, H, n, s") };
+					cell = { "v": "Date(" & value.year() & ", " & value.month() - 1 & ", " & value.dateTimeFormat("d, H, n, s") & ")" };
 					if (dform neq "") {
 						cell["f"] = value.dateTimeFormat(dform);
 					}
