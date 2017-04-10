@@ -1,6 +1,5 @@
 <cfscript>
 	function QueryToDataTable(query, labels="", roles="", dform="", nform="", tform="") {
-		//this type map is set up for MySQL, other databases may use different type names; modify this line accordingly
 		var typeMap = { "CHAR": "string", "VARCHAR": "string", "BINARY": "string", "VARBINARY": "string", "BLOB": "string", "TEXT": "string", "ENUM": "string", "SET": "string", "INTEGER": "number", "": "number", "SMALLINT": "number", "TINYINT": "number", "MEDIUMINT": "number", "BIGINT": "number", "DECIMAL": "number", "NUMERIC": "number", "FLOAT": "number", "DOUBLE": "number", "BIT": "number", "YEAR": "number", "TIMESTAMP": "datetime", "DATETIME": "datetime", "DATE": "date", "TIME": "timeofday", "": "string" };
 		var data = { "cols": [], "rows": [] };
 		for (i = 1; i lte query.columnList.listLen(); i++) {
@@ -49,8 +48,10 @@
 					if (tform neq "") {
 						cell["f"] = value.timeFormat(tform);
 					}
-				} else {
+				} else if (value neq "") {
 					cell = { "v": value };
+				} else {
+					cell = { "v": JavaCast("null", "") };
 				}
 				row["c"].append(cell);
 			}
